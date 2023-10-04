@@ -27,11 +27,11 @@ Download the repository in your local using the following steps.
 
 Every contribution to `master` branch will launch a new version in Netlify. Please use the following url to see the app in production:
 
-- [Netlify](https://master--whimsical-dolphin-f6d0d3.netlify.app/adress-book/list)
+- [Netlify](https://master--whimsical-dolphin-f6d0d3.netlify.app)
 
 Also deployed manually in Github pages:
 
-- [Github pages](https://jhonatan89.github.io/address-book/adress-book/list)
+- [Github pages](https://jhonatan89.github.io/address-book)
 
 ## Build
 
