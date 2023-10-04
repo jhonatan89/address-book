@@ -1,0 +1,47 @@
+<div class="card--container">
+  <button
+    mat-mini-fab
+    color="primary"
+    (click)="goBack()"
+    class="card--back"
+    aria-label="Go back"
+  >
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title-group class="card--title--group">
+        <mat-card-title class="card--title--group__name"
+          >{{ contact?.name?.first }} {{ contact?.name?.last }}</mat-card-title
+        >
+        <mat-card-subtitle>{{ contact?.email }}</mat-card-subtitle>
+        <img
+          class="card--avatar"
+          src="{{ contact?.picture?.large }}"
+          alt="{{ contact?.name?.first }} {{ contact?.name?.last }}"
+        />
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="card--full--text">
+        <span class="card--label">Phone:</span> {{ contact?.phone }}
+      </p>
+      <p class="card--full--text">
+        <span class="card--label">Address:</span>
+        {{ contact?.location?.street?.number }}
+        {{ contact?.location?.street?.name }}
+      </p>
+      <p class="card--full--text">
+        <span class="card--label">City:</span> {{ contact?.location?.city }}
+      </p>
+      <p class="card--full--text">
+        <span class="card--label">Postal Code:</span>
+        {{ contact?.location?.postcode }}
+      </p>
+      <p class="card--full--text">
+        <span class="card--label">Date of birth:</span>
+        {{ contact?.dob?.date | date }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

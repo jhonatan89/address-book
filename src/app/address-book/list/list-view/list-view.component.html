@@ -1,0 +1,39 @@
+<div class="list--container">
+  <mat-list class="list">
+    <div mat-subheader>Contacts</div>
+    <mat-list-item *ngFor="let contact of contacts?.results">
+      <div class="list--item" (click)="goToDetail(contact)">
+        <div class="list--item__avatar">
+          <img
+            src="{{ contact.picture.medium }}"
+            alt="{{ contact.name.first }} {{ contact.name.last }}"
+            class="list--item__avatar__image"
+          />
+        </div>
+        <div class="list--item__text">
+          <span matListItemTitle
+            >{{ contact.name.first }} {{ contact.name.last }}</span
+          >
+          <span matListItemLine class="list--item__text__detail">{{
+            contact.email
+          }}</span>
+          <span matListItemLine class="list--item__text__detail">{{
+            contact.phone
+          }}</span>
+        </div>
+      </div>
+    </mat-list-item>
+    <mat-list-item *ngIf="contacts?.results?.length === 0">
+      <div class="list--item">
+        <span matListItemTitle>No results</span>
+      </div>
+    </mat-list-item>
+  </mat-list>
+  <mat-paginator
+    [pageSize]="10"
+    [length]="100"
+    (page)="changePage($event)"
+    [hidePageSize]="true"
+    [pageSizeOptions]="[20, 30, 50, 100]"
+  ></mat-paginator>
+</div>

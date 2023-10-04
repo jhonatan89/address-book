@@ -1,0 +1,5 @@
+<address-list-view
+  [contacts]="contacts$ | async"
+  (contactSelected)="goToDetail($event)"
+  (page)="changePage($event)"
+></address-list-view>
